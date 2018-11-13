@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数组-斐波那契数列</title>
+		<!--几乎所有的编程语言都原生支持数组类型，数组是最简单的内存数据结构-->
+	</head>
+	<script>
+/*		//JavaScript里面声明数组很简单:[]
+		var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday',
+                          'Thursday', 'Friday', 'Saturday'];
+        console.log(daysOfWeek.length); 
+        //遍历输出数组里的所有元素
+        for (var i=0; i<daysOfWeek.length; i++){
+		console.log(daysOfWeek[i]);
+		}
+		*/
+		var f = [];
+		f[1] = 1; //将斐波那契数列中的前两个数字分别赋给了数组的第二和第三位数组的第一位是0，
+		f[2] = 1; //这里从第二位开始分别保存斐波那契数列中对应位置的元素
+		for (var i = 3;i<21;i++) {
+			f[i] = f[i-1] + f[i-2];
+		}       //得到斐波那契数列的第三道第二十位的数字，把结果赋值给当前位置上的元素---从数组的索引3到索引19
+		for(var i = 0;i<f.length;i++){
+			console.log(f[i]);  //循环遍历数组的各个元素
+		}
+	</script>
+	<body>
+	</body>
+</html>
+ 
